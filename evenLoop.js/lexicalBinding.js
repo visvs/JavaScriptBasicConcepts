@@ -13,6 +13,9 @@ const instructor = {
 
 }
 
+//los obejetos no crean  nuevos scopes (locales)
+//funciones crean nuevos scopes
+
 console.log(instructor.greeting())
 //no es el this de follow es el this del scope
 const genius = {
@@ -21,14 +24,20 @@ const genius = {
     greeting: function(){
         console.log(`${this.name} is a genius`)
 
-        const follow = () =>{
+        function follow(){
             console.log(`Follow in ${this.twitter}`)
         }
         follow()
     }
-
 }
+
+//objetos guardan referencias --> pointers//address
+
+B01
+A13
 
 console.log(genius.greeting())
 
 
+
+console.log(genius == instructor)

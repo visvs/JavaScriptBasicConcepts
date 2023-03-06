@@ -11,13 +11,22 @@ function onClick (){
 }
 
 document.getElementById('root').addEventListener('onClick', onClick);
-
-fetch('http://example.com').then(response => onFetch(response))
+fetch('http://example.com').then((response) => onFetch(response)).catch()
 fetch('http://example.com').then(onFetch)
 
 
-async function callFetch(){
-    const response =  await fetch('http://example.com')
 
-    onFetch(response)
+async function callFetch(){
+    try {
+        const response =  await fetch('http://example.com')
+        onFetch(response)
+    } catch (error) {
+        console.log('')
+    }
 }
+
+setTimeout(()=>{
+    console.log('que onda')
+}, 1000)
+
+console.log('queonda')
