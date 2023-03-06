@@ -19,12 +19,20 @@ console.log(['🍎', '🍐', '🍇'].push('🍌', '🍎'))  //['🍎', '🍐', '
 
 ['🍌', '🥑', '🍆'].concat(['🫐'])   //['🍌', '🥑', '🍆','🫐']
 
+console.log(['🍌', '🥑', '🍆'].toString()) //🍌,🥑,🍆
 
 ['🥕', '🥦', '🌽'].some(item => item === '🍍')   //false
 ['🥕', '🥦', '🌽'].some(item => item === '🌽')   //true  --> itera hasta que encuentra incidencia
 
-['🍔', '🍕', '🍟'].every(item => item === '🍟')   //false
+
+function gg (item){
+    const myBoleano =  item === '🍟'
+    return myBoleano
+}
+['🍔', '🍕', '🍟'].every(gg)   //false
 ['🍔', '🍔', '🍔'].every(item => item === '🍔')   //true
+
+
 
 ['🥒', '🫒', '🍉', '🍟'].find(item => item === '🍟') //undefind si no encuentra nada
 ['🥒', '🫒', '🍉', '🍟'].findIndex(item => item === '🍟') // -1 sino encuentra nada
@@ -41,8 +49,23 @@ console.log(laLineaIntoxicada.splice(3 ,1, '🍑'))
 console.log(laLineaIntoxicada)
 
 console.log([3,1,5,7,2,10, 18].sort())
-console.log([3,1,5,7,2,10, 18].sort((a,b) => a - b))
+console.log([3,1,5,7,2,10, 18].sort((a,b) => {
+    console.log({a,b})
+    return a - b
+}))
 console.log([3,1,5,7,2,10, 18].sort((a,b) => b - a))
+//reduce
+const ventas = [10,14,15,3,6,9,10, 20]
+
+console.log(ventas.reduce((accumulador, valor, indice, array)=>{
+    return accumulador = accumulador + valor
+}, 0))
+
+const authors = {
+    10: 'carItoon',
+    8: 'Mily',
+    7: 'imagine'
+}
 
 const aVerReduceme = [
     {
@@ -55,26 +78,32 @@ const aVerReduceme = [
     },
     {
         sing: 'bird',
-        rate: 8,
+        rate: 6,
     }
 ]
 
+console.log(aVerReduceme.map((obj)=>{
+    return {...obj, author: authors[obj.rate] ?? 'desconocido'}
+}))
 
-console.log(aVerReduceme.reduce((reduciendo, valorIterado)=>{
+const result = aVerReduceme.reduce((reduciendo, valorIterado)=>{
+    if(reduciendo?.rate > valorIterado.rate) return reduciendo
+
+    return reduciendo = valorIterado
+ }, {})
+console.log(result)
+
+ console.log(aVerReduceme.reduce((reduciendo, valorIterado)=>{
     return reduciendo = reduciendo + valorIterado.rate
 }, 0))
 
-console.log(aVerReduceme.map((obj)=>{
-    return {...obj, author: 'su autor'}
-}, 0))
-
-
-
 //Todos pueden pasar al antro??
-[{name: 'Sam', age: 24}, {name: 'Robert', age: 21}, {name: 'Max', age: 17}].every(item => item.age >= 18) //false = ta valieron
+[{name: 'Sam', age: 24}, {name: 'Robert', age: 21}, {name: 'Max', age: 17}].every(item => item.age >= 18) //false = ya valieron
 [{name: 'Sam', age: 24}, {name: 'Robert', age: 21}, {name: 'Max', age: 17}].some(item => item.age < 18) //true = ya valieron
 //Quien si puede??
+const amigos = [{name: 'Sam', age: 24}, {name: 'Robert', age: 21}, {name: 'Max', age: 17}]
 
+console.log(amigos.filter((amiguis)=> amiguis.age >= 18))
 
 
 
