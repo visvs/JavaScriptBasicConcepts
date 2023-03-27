@@ -1,0 +1,13 @@
+/*Selector de clase .classname*/
+.movie{
+    background-color: aqua;
+}
+
+#subtitle {
+    background-color: crimson;
+}
+
+ul {
+    background-color: burlywood;
+}
+

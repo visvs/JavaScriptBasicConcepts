@@ -1,0 +1,41 @@
+/*Combinador de descendiente
+Espaci en blanco entre cada selector
+El primer elemento es el ancestro del segundo elemento*/
+
+
+.lists .list {
+    text-decoration: underline;
+}
+
+.lists > li { /*demasiada especificidad*/
+    list-style: upper-roman;
+}
+
+
+.subtitle + p {
+    background-color: #a05fdca2;
+    /*display: none;
+    */
+    opacity: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.paragraph {
+    color: white;
+    background-color: blueviolet;
+    font-size: 24px;
+}
+
+.subtitle:hover  + .paragraph{ /*pseudoclase*/
+    /*display: block; *//*none, inline, block, inline-block*/
+    opacity: 1;
+}
+
+.diferente {
+    font-size: 30px;
+}
+

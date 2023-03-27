@@ -1,0 +1,55 @@
+/*Combinador de descendiente
+Espaci en blanco entre cada selector
+El primer elemento es el ancestro del segundo elemento*/
+
+.lists .list {
+    text-decoration: underline;
+}
+
+.todo .list {
+    list-style: decimal;
+}
+
+.days .list {
+    list-style: none;
+}
+
+/*Combinador de hijos directos  >
+solo hijos directos
+*/
+
+.lists > li { /*demasiada especificidad*/
+    list-style: upper-roman;
+}
+
+/*Hermano adyacente
+Elemento hermano que le sigue, comparten el mismo padre*/
+
+.subtitle + p{
+    background-color: #a05fdca2;
+    display: none ;
+    /*
+    opacity: 0;
+    transition: 1s/;
+    -webkit-transition: 1s/;
+    -moz-transition: 1s/;
+    -ms-transition: 1s/;
+    -o-transition: 1s/;
+    */
+}
+
+.paragraph {
+    background-color: #dc5fd0a2;
+}
+.subtitle:hover  + .paragraph{
+    display: block ;
+    opacity: 1;
+}
+
+
+/*Combinador de hermanos generales
+El segundo selector debe ser un hermano siguiente del primero, selecciona los siguientes que cumplan con la condicion*/
+
+.subtitle ~ .paragraph {
+    background-color: blue;
+}

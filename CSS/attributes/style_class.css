@@ -1,0 +1,15 @@
+/*Selector de atributo*/
+
+/*Elementos que tengan una clase*/
+[class] { 
+    background-color: yellow;
+}
+
+
+[value*="cursocss.com"] { /*que contenga x valor*/
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    color: green;
+}
+
