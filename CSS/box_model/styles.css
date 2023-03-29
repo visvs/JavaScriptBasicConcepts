@@ -17,4 +17,8 @@
     border-bottom: 3px;
     border-color: #000;
     border-style: solid;
+    /*arriba, derecha-izquierda, abajo*/
+    margin: 20px 20px 20px;
+    /*arriba-abajo, derecha-izquierda*/
+    margin: 20px 20px;
 }
