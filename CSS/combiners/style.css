@@ -53,3 +53,4 @@ El segundo selector debe ser un hermano siguiente del primero, selecciona los si
 .subtitle ~ .paragraph {
     background-color: blue;
 }
+

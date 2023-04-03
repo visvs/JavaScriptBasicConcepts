@@ -1,0 +1,20 @@
+
+.container {
+    width: 100%;
+    background-color: cadetblue;
+    height: 100vh;
+}
+
+.container_child {
+    width: 100%;
+}
+.uno {
+    background-color: blue;
+}
+.dos{
+    background-color: crimson;
+}
+
+.tres {
+    background-color: aqua;
+}
