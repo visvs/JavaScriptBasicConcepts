@@ -1,0 +1,16 @@
+body{
+    background-color: crimson;
+}
+
+@media (max-width:600px) {
+    body{
+        background-color: blue;
+    }
+}
+
+
+@media (min-width:800px) {
+    body{
+        background-color: violet;
+    }
+}
