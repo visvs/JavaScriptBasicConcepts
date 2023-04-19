@@ -8,3 +8,86 @@ body{
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
+
+.gallery{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    display: grid;
+    padding-top: 30px;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* @media (min-width: 700px) {
+    body{
+        height: 100vh;
+    }
+    .image__1{
+        grid-area: area1;
+    }
+    .image__2{
+        grid-area: area2;
+    }
+    .image__3{
+        grid-area: area3;
+    }
+    .image__4{
+        grid-area: area4;
+    }
+    .gallery{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "area1 area1 area1 area2 area2 area2"
+            "area1 area1 area1 area2 area2 area2"
+            "area1 area1 area1 area2 area2 area2"
+            "area1 area1 area1 area2 area2 area2"
+            "area3 area3 area3 area4 area4 area4"
+            "area3 area3 area3 area4 area4 area4"
+            "area3 area3 area3 area4 area4 area4"
+            "area3 area3 area3 area4 area4 area4";
+    }
+} */
+
+
+@media (min-width: 950px) {
+    body{
+        height: 100vh;
+    }
+    .image__1{
+        grid-area: area1;
+    }
+    .image__2{
+        grid-area: area2;
+    }
+    .image__3{
+        grid-area: area3;
+    }
+    .image__4{
+        grid-area: area4;
+    }
+    .gallery{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "area1 area1 area2 area2 area2 area2"
+            "area1 area1 area2 area2 area2 area2"
+            "area1 area1 area2 area2 area2 area2"
+            "area1 area1 area4 area4 area4 area4"
+            "area1 area1 area4 area4 area4 area4"
+            "area1 area1 area4 area4 area4 area4"
+            "area3 area3 area3 area3 area3 area3"
+            "area3 area3 area3 area3 area3 area3";
+    }
+}
+
+
+
