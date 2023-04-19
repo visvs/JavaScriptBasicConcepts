@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial';
+}
+
+.container{
+    width: 90%;
+    height: 1200px;
+    outline: 2px solid;
+    margin: 40px auto;
+    display: grid;
+    gap: 10px;
+   /*  grid-template-columns:repeat(3, 1fr);  */
+    /*Solo aplica para grid: unidad especial 1fr*/ /*6fr */
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* column-gap: 10px;
+    row-gap: 10px; */
+/*     gap: 10px;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr); */
+    /* justify-content: start;
+    align-content: start; */
+
+    /*rectangulares la cobetura de las areas*/
+    /* grid-template-areas:
+        "area1 area2 area3"
+        "area1  area4 area3"
+    ; */
+
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.item{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-size: cover;
+    background-position: center; */
+    /* justify-self: center;
+    align-self: end;  */
+}
+
+.item1{
+    background-color: slateblue;
+    background-image: url("assets/1.jpg");
+    /* justify-self: start; */ /*X*/
+    /* align-self: center; */ /*Y*/
+
+    /* grid-column: 1 / span 3; */ /*   | | | |    */
+   /*  grid-row: 1 / -1; */ /*   | | | |    */
+    /* grid-area: area1; */
+}
+
+.item{
+    /* width: 100px; */
+    /* height: 100px; */
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.item2{
+    background-color: deeppink;
+    background-image: url("assets/2.jpg");
+        /* grid-area: area2; */
+
+}
+
+.item3{
+    background-color: seagreen;
+    background-image: url("assets/3.jpg");
+       /*  grid-area: area3; */
+
+}
+
+.item4{
+    background-color: brown;
+    background-image: url("assets/4.jpg");
+        /* grid-area: area4; */
+
+}
+
+.item5{
+    background-color: cornflowerblue;
+    background-image: url("assets/5.jpg");
+  
+}
+
+.item6{
+    background-color: rebeccapurple;
+    background-image: url("assets/6.jpg");
+}
+
+/* @media (min-width:700px) {
+    .container{
+
+    }
+} */
