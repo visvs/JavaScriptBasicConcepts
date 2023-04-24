@@ -10,11 +10,12 @@ body{
 }
 
 .gallery{
+    max-width: 1200px;
     width: 90%;
     height: 95%;
-    margin: auto;
+    margin:  0 auto;
     display: grid;
-    padding-top: 30px;
+    padding-top: 10px;
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
